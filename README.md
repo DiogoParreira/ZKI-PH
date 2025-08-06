@@ -40,6 +40,11 @@ Next, the data was split into training sets 1–3 and validation sets 1–3. All
 ## Feature Forecasting
 After state-level aggregation, each state had a time series for each feature in the training sets. These were used to forecast the remainder of the time series to span the validation sets using the TiRex model.
 
+## Model predictions
+We used the TSMixerX to forecast dengue cases. This model inherently allows the computation of predictive uncertainty through conformal predictions. Through systematically incorporating the distribution of historical residuals, the model generates a range of plausible forecast trajectories. Based on these, TSMixerX constructs uncertainty intervals that reflect the distribution of prediction errors. 
+
+For more information on the computation of uncertainty distribution, please see the Github page on neuralforecast.utils: https://github.com/Nixtla/neuralforecast/blob/main/neuralforecast/utils.py (function: add_conformal_distribution_intervals).
+
 ## Citations
 Chen, Si-An, Chun-Liang Li, Nate Yoder, Sercan O. Arik, and Tomas Pfister (2023). TSMixer: An All-MLP Architecture for Time Series Forecasting. arXiv:2303.06053
 
