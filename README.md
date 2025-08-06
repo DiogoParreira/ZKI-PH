@@ -1,7 +1,17 @@
 # Submission TSMixer ZKI-PH4
-Authors:
-Affiliation: Robert Koch Institute, Berlin, Germany
-Corresponding author:
+Authors: 
+  Anna maria hartner
+  Benjamin Bangert
+  Christopher Irrgang
+  Diogo Parreira
+  Nadezhda Malysheva
+  Sten de Schrijver
+  Tarique Siddiqui
+
+Affiliation: Centre for Artificial Intelligence in Public Health Research, Robert Koch Institute, Berlin, Germany
+https://www.rki.de/EN/Institute/Organisation/Departments/ZKI-PH/zki-ph-centre-for-artificial-intelligence-in-public-health-research-node.html
+
+Corresponding authors: parreirad@rki.de ; de-schrijvers@rki.de 
 
 ## Abstract
 We built a model based on the Time Series Mixer (**TSMixer**), as proposed by Chen et al. (2023). After identifying the most important features for state-level predictions using TSMixer, we selected: `pdo`, `precip_min`, `pressure_min`, and `temp_min`. Since these features were unavailable during the forecast period, we used the multivariate foundation model **TiRex** (Auer et al., 2025) to forecast them over the relevant time window. These forecasts were then used as additional inputs to TSMixer for the final prediction task.
